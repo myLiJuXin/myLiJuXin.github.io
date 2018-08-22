@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="数据库,redis,mysql," />
+  <meta name="keywords" content="Linux命令," />
 
 
 
@@ -81,21 +81,18 @@
 
 
 
-<meta name="description" content="redis与mysql的优缺点分析，以及在web中的配合使用">
-<meta name="keywords" content="数据库,redis,mysql">
+<meta name="description" content="关于linux系统ubantu终端的一些常用命令整理">
+<meta name="keywords" content="Linux命令">
 <meta property="og:type" content="article">
-<meta property="og:title" content="关于数据库redis与Mysql的区别以及在web开发中的配合使用">
-<meta property="og:url" content="http://myLiJuXin.com/2018/08/18/关于数据库redis与Mysql的区别以及在web开发中的配合使用/index.html">
+<meta property="og:title" content="关于Linux的常用基本命令（二）">
+<meta property="og:url" content="http://myLiJuXin.com/2018/08/21/关于Linux的终端常用命令（二）/index.html">
 <meta property="og:site_name" content="初心不变">
-<meta property="og:description" content="redis与mysql的优缺点分析，以及在web中的配合使用">
+<meta property="og:description" content="关于linux系统ubantu终端的一些常用命令整理">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://mylijuxin.com/2018/08/18/关于数据库redis与Mysql的区别以及在web开发中的配合使用/1.jpg">
-<meta property="og:image" content="http://mylijuxin.com/2018/08/18/关于数据库redis与Mysql的区别以及在web开发中的配合使用/2.jpg">
-<meta property="og:updated_time" content="2018-08-20T15:09:54.000Z">
+<meta property="og:updated_time" content="2018-08-22T08:27:09.120Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="关于数据库redis与Mysql的区别以及在web开发中的配合使用">
-<meta name="twitter:description" content="redis与mysql的优缺点分析，以及在web中的配合使用">
-<meta name="twitter:image" content="http://mylijuxin.com/2018/08/18/关于数据库redis与Mysql的区别以及在web开发中的配合使用/1.jpg">
+<meta name="twitter:title" content="关于Linux的常用基本命令（二）">
+<meta name="twitter:description" content="关于linux系统ubantu终端的一些常用命令整理">
 
 
 
@@ -125,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="http://myLiJuXin.com/2018/08/18/关于数据库redis与Mysql的区别以及在web开发中的配合使用/"/>
+  <link rel="canonical" href="http://myLiJuXin.com/2018/08/21/关于Linux的终端常用命令（二）/"/>
 
 
 
 
 
-  <title>关于数据库redis与Mysql的区别以及在web开发中的配合使用 | 初心不变</title>
+  <title>关于Linux的常用基本命令（二） | 初心不变</title>
   
 
 
@@ -306,7 +303,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://myLiJuXin.com/2018/08/18/关于数据库redis与Mysql的区别以及在web开发中的配合使用/">
+    <link itemprop="mainEntityOfPage" href="http://myLiJuXin.com/2018/08/21/关于Linux的终端常用命令（二）/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="LJX">
@@ -323,7 +320,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">关于数据库redis与Mysql的区别以及在web开发中的配合使用</h1>
+          <h1 class="post-title" itemprop="name headline">关于Linux的常用基本命令（二）</h1>
         
 
         <div class="post-meta">
@@ -335,8 +332,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-18T21:51:28+08:00">
-                2018-08-18
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-21T17:39:04+08:00">
+                2018-08-21
               </time>
             
 
@@ -358,8 +355,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/数据库/" itemprop="url" rel="index">
-                    <span itemprop="name">数据库</span>
+                  <a href="/categories/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
                   </a>
                 </span>
 
@@ -389,7 +386,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1,427
+                  415
                 </span>
               
 
@@ -405,7 +402,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  5
+                  2
                 </span>
               
             </div>
@@ -413,7 +410,7 @@
 
           
               <div class="post-description">
-                  redis与mysql的优缺点分析，以及在web中的配合使用
+                  关于linux系统ubantu终端的一些常用命令整理
               </div>
           
 
@@ -430,43 +427,17 @@
       
 
       
-        <h3 id="传统型关系数据库Mysql的瓶颈"><a href="#传统型关系数据库Mysql的瓶颈" class="headerlink" title="传统型关系数据库Mysql的瓶颈"></a>传统型关系数据库Mysql的瓶颈</h3><p>在互联网领域，MySQL作为一款关系型数据库为互联网的发展做出了卓越的贡献。然而随着互联网的发展，在大数据量高并发的环境下，应用开发也越来越复杂，具有很强的技术挑战性。分表分库子库等无不在增加数据库结构的复杂程度。MySQL数据库也经常存储一些大文本字段，导致数据库表非常的大，在做数据库恢复的时候就导致非常的慢，不容易快速恢复数据库。比如1000万4KB大小的文本就接近40GB的大小，如果能把这些数据从MySQL省去，MySQL将变得非常的小。<br><br>关系数据库很强大，但是它并不能很好的应付所有的应用场景。MySQL的扩展性差，大数据下IO压力大，表结构更改困难。</p>
-<h3 id="Nosql与redis"><a href="#Nosql与redis" class="headerlink" title="Nosql与redis"></a>Nosql与redis</h3><p>NoSQL最常见的解释是“non-relational”，“Not Only SQL”也被很多人接受，指的是非关系型的数据库。</p>
-<h4 id="Nosql的优势"><a href="#Nosql的优势" class="headerlink" title="Nosql的优势"></a>Nosql的优势</h4><p>易扩展：NoSQL数据库种类繁多，但是一个共同的特点都是去掉关系数据库的关系型特性。数据之间无关系，这样就非常容易扩展。<br>大数据量，高性能：NoSQL数据库都具有非常高的读写性能，尤其在大数据量下，同样表现优秀。这得益于它的无关系性，数据库的结构简单<br>灵活的数据模型：NoSQL无需事先为要存储的数据建立字段，随时可以存储自定义的数据格式。而在关系数据库里，增删字段是一件非常麻烦的事情。如果是非常大数据量的表，增加字段简直就是一个噩梦<br>高可用：NoSQL在不太影响性能的情况，就可以方便的实现高可用的架构。</p>
-<h4 id="redis"><a href="#redis" class="headerlink" title="redis"></a>redis</h4><p>Redis是一个开源（BSD许可）的、内存中的数据结构存储系统，它可以用作数据库、缓存和消息中间件。<br>redis是一个高性能的key-value存储系统。和Memcached类似，它支持存储的value类型相对更多，包括string(字符串)、list(链表)、set(集合)、zset(sortedset–有序集合)和hash（哈希类型）。redis的出现，很大程度补偿了memcached这类key/value存储的不足，在部分场合可以对关系数据库起到很好的补充作用。它提供了Python，Ruby，Erlang，PHP客户端，使用很方便<br>Redis支持主从同步。数据可以从主服务器向任意数量的从服务器上同步，从服务器可以是关联其他从服务器的主服务器。这使得Redis可执行单层树复制。从盘可以有意无意的对数据进行写操作。由于完全实现了发布/订阅机制，使得从数据库在任何地方同步树时，可订阅一个频道并接收主服务器完整的消息发布记录。同步对读取操作的可扩展性和数据冗余很有帮助。</p>
-<h3 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h3><p>NoSQL数据库的出现，弥补了关系数据（比如MySQL）在某些方面的不足，在某些方面能极大的节省开发成本和维护成本<br>MySQL和NoSQL都有各自的特点和使用的应用场景，两者的紧密结合将会给数据库发展带来新的思路。让关系数据库关注在关系上，NoSQL关注在存储上。</p>
-<h3 id="利用redis做mysql的缓存"><a href="#利用redis做mysql的缓存" class="headerlink" title="利用redis做mysql的缓存"></a>利用redis做mysql的缓存</h3><p>前面部分已经介绍mysql的瓶颈，当网站的处理和访问量非常大的时候，我们的数据库的压力就变大了，数据库的连接池，数据库同时处理数据的能力就会受到很大的挑战，一旦数据库承受了其最大承受能力，网站的数据处理效率就会大打折扣。此时就要使用高并发处理、负载均衡和分布式数据库，而这些技术既花费人力，又花费资金。</p>
-<h4 id="缓存"><a href="#缓存" class="headerlink" title="缓存"></a>缓存</h4><img src="/2018/08/18/关于数据库redis与Mysql的区别以及在web开发中的配合使用/1.jpg">
-<p>页面缓存经常用在CMS(content manage system)内存管理系统里面。<br>数据缓存经常会用在页面的具体数据里面。</p>
-<h4 id="Redis缓存原理"><a href="#Redis缓存原理" class="headerlink" title="Redis缓存原理"></a>Redis缓存原理</h4><p>采用redis nosql数据库作为Mysql数据库的缓存，在查找的时候，首先查找redis缓存，如果找到则返回结果；如果在redis中没有找到，那么查找Mysql数据库，找到的花则返回结果并且更新redis；如果没有找到则返回空。</p>
-<img src="/2018/08/18/关于数据库redis与Mysql的区别以及在web开发中的配合使用/2.jpg">
-<p>对于写入：用户增删改数据库，先访问mysql，mysql再把数据更新到redis。</p>
-<p>Mysql中的数据都是按表存储的；更微观地看，这些表都是按行存储的。每执行一次select查询，Mysql都会返回一个结果集，这个结果集由若干行组成。所以，一个自然而然的想法就是在Redis中找到一种对应于Mysql行的数据结构。<br>Redis中提供了五种基本数据结构，即字符串（string）、列表（list）、哈希（hash）、集合（set）和有序集合（sorted set）。经过调研，发现适合存储行的数据结构有两种，即string和hash。</p>
-<p>用户的缓存数据在返回时一般都是JSON的字典格式，对应的存到redis里就是hash格式，这个与python的字典是相对应的。</p>
-<table>
-<thead>
-<tr>
-<th>redis中的hash</th>
-<th>python中的字典</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><font color="#000000">key</font></td>
-<td><font color="#000000">对象</font></td>
-</tr>
-<tr>
-<td><font color="#000000">field</font></td>
-<td><font color="#000000">key</font></td>
-</tr>
-<tr>
-<td><font color="#000000">value</font></td>
-<td><font color="#000000">value</font></td>
-</tr>
-</tbody>
-</table>
-<p>即hash会根据要缓存的数据生成唯一标识UUID，UUID作为键，用户的字典数据中的键值对作为UUID键的值，存储到redis中。</p>
+        <div>接上面《关于Linux的常用基本命令（一）》</div><a href="https://zypuu.github.io/2018/08/15/%E5%85%B3%E4%BA%8ELinux%E7%9A%84%E5%B8%B8%E7%94%A8%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4%EF%BC%88%E4%B8%80%EF%BC%89/" target="_blank" rel="noopener">点这里</a><br><br>#### 管道命令<br><br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">【命令1】 | 【命令2】 # 命令1的输出结果作为命令2的输入</span><br></pre></td></tr></table></figure><br><br>#### 查找某个文件的文本<br><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">grep 【选项】 “字符串”  【文件】</span><br><span class="line">选项：-i 忽略大小写</span><br><span class="line">		  -n 显示匹配行及行号</span><br><span class="line">		  -v 取反（显示余下的信息）</span><br></pre></td></tr></table></figure><br><br><div>例： ps -aux | grep ’mysql‘ 查看运行中的进程，带有mysql的进程</div>
 
+<h4 id="查找文件"><a href="#查找文件" class="headerlink" title="查找文件"></a>查找文件</h4><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">find 【路径】 【选项】</span><br><span class="line">选项：-name ’字符串‘ # 查找该文件名的文件</span><br><span class="line">           -size +（-）’大小‘ # 查找文件大于（小于）多少的文件</span><br><span class="line">		   -permission 权限 # 查找拥有该权限的文件</span><br></pre></td></tr></table></figure>
+<h4 id="tar打包压缩文件与解压缩"><a href="#tar打包压缩文件与解压缩" class="headerlink" title="tar打包压缩文件与解压缩"></a>tar打包压缩文件与解压缩</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">tar 【选项】【打包后的文件名】【 要打包的文件名】</span><br><span class="line">选项： -c 生成打包文件</span><br><span class="line">			-v 显示进度</span><br><span class="line">			-f 指定打包文件名称，所以f选项要放最后</span><br><span class="line">			-x 拆包解包</span><br><span class="line">			-z gzip格式压缩解压</span><br><span class="line">			-j bzip2格式压缩解压</span><br><span class="line">			c 指定目录</span><br></pre></td></tr></table></figure>
+<h4 id="gzip格式压缩解压"><a href="#gzip格式压缩解压" class="headerlink" title="gzip格式压缩解压"></a>gzip格式压缩解压</h4><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">gizp 【文件名】 # 压缩文件</span><br><span class="line">gzip -d 【文件名】 # 解压缩文件</span><br></pre></td></tr></table></figure>
+<h4 id="查看命令位置"><a href="#查看命令位置" class="headerlink" title="查看命令位置"></a>查看命令位置</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">which</span><br></pre></td></tr></table></figure>
+<h4 id="查看当前用户登录"><a href="#查看当前用户登录" class="headerlink" title="查看当前用户登录"></a>查看当前用户登录</h4><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">who # tty 本地登录 pts 远程登录</span><br></pre></td></tr></table></figure>
+<h4 id="授权当前用户执行命令"><a href="#授权当前用户执行命令" class="headerlink" title="授权当前用户执行命令"></a>授权当前用户执行命令</h4><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo # 管理员权限</span><br></pre></td></tr></table></figure>
+<h4 id="退出终端，回到上一用户，退出远程"><a href="#退出终端，回到上一用户，退出远程" class="headerlink" title="退出终端，回到上一用户，退出远程"></a>退出终端，回到上一用户，退出远程</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">exit</span><br></pre></td></tr></table></figure>
+<h4 id="软件卸载与安装"><a href="#软件卸载与安装" class="headerlink" title="软件卸载与安装"></a>软件卸载与安装</h4><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install “安装包” # 安装</span><br><span class="line">sudo apt-get remove “安装包” # 删除</span><br><span class="line">sudo apt-get update “安装包” # 更新</span><br></pre></td></tr></table></figure>
+<h4 id="关机重启"><a href="#关机重启" class="headerlink" title="关机重启"></a>关机重启</h4><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">shutdown -h now （或加时间） # 立即关机，或者多少时间后关机</span><br><span class="line">				-r # 重启</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -493,7 +464,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/数据库-redis-mysql/" rel="tag"><i class="fa fa-tag"></i> 数据库,redis,mysql</a>
+            <a href="/tags/Linux命令/" rel="tag"><i class="fa fa-tag"></i> Linux命令</a>
           
         </div>
       
@@ -506,8 +477,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/08/18/关于web开发实现图形验证码与短信验证码功能/" rel="next" title="关于web开发用户注册功能的图形验证码与短信验证码">
-                <i class="fa fa-chevron-left"></i> 关于web开发用户注册功能的图形验证码与短信验证码
+              <a href="/2018/08/21/mybatis入门/" rel="next" title="mybatis学习笔记(第一天)">
+                <i class="fa fa-chevron-left"></i> mybatis学习笔记(第一天)
               </a>
             
           </div>
@@ -516,8 +487,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/08/20/关于Celery的异步服务使用/" rel="prev" title="关于Celery的异步服务使用">
-                关于Celery的异步服务使用 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/08/21/关于Linux的终端常用命令（一）/" rel="prev" title="关于Linux终端的常用命令（一）">
+                关于Linux终端的常用命令（一） <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -639,7 +610,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -661,7 +632,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -719,7 +690,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#传统型关系数据库Mysql的瓶颈"><span class="nav-number">1.</span> <span class="nav-text">传统型关系数据库Mysql的瓶颈</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Nosql与redis"><span class="nav-number">2.</span> <span class="nav-text">Nosql与redis</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Nosql的优势"><span class="nav-number">2.1.</span> <span class="nav-text">Nosql的优势</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#redis"><span class="nav-number">2.2.</span> <span class="nav-text">redis</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#结论"><span class="nav-number">3.</span> <span class="nav-text">结论</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#利用redis做mysql的缓存"><span class="nav-number">4.</span> <span class="nav-text">利用redis做mysql的缓存</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#缓存"><span class="nav-number">4.1.</span> <span class="nav-text">缓存</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Redis缓存原理"><span class="nav-number">4.2.</span> <span class="nav-text">Redis缓存原理</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#查找文件"><span class="nav-number">1.</span> <span class="nav-text">查找文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#tar打包压缩文件与解压缩"><span class="nav-number">2.</span> <span class="nav-text">tar打包压缩文件与解压缩</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#gzip格式压缩解压"><span class="nav-number">3.</span> <span class="nav-text">gzip格式压缩解压</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查看命令位置"><span class="nav-number">4.</span> <span class="nav-text">查看命令位置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查看当前用户登录"><span class="nav-number">5.</span> <span class="nav-text">查看当前用户登录</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#授权当前用户执行命令"><span class="nav-number">6.</span> <span class="nav-text">授权当前用户执行命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#退出终端，回到上一用户，退出远程"><span class="nav-number">7.</span> <span class="nav-text">退出终端，回到上一用户，退出远程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#软件卸载与安装"><span class="nav-number">8.</span> <span class="nav-text">软件卸载与安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#关机重启"><span class="nav-number">9.</span> <span class="nav-text">关机重启</span></a></li></ol></div>
             
 
           </div>
@@ -754,7 +725,7 @@
     
       <span class="post-meta-item-text">本站总字数&#58;</span>
     
-    <span title="本站总字数">10.0k</span>
+    <span title="本站总字数">4.4k</span>
   
 </div>
 
