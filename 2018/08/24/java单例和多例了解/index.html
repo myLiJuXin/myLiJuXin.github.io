@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="初心不变">
 <meta property="og:description" content="对于java设计模式中单例多例的一些理解">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-08-25T10:15:05.304Z">
+<meta property="og:updated_time" content="2018-08-25T17:12:08.728Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="java单例和多例了解">
 <meta name="twitter:description" content="对于java设计模式中单例多例的一些理解">
@@ -386,7 +386,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  8
+                  1,190
                 </span>
               
 
@@ -402,7 +402,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1
+                  5
                 </span>
               
             </div>
@@ -427,7 +427,21 @@
       
 
       
-        <h2 id="一-什么是单例-多例"><a href="#一-什么是单例-多例" class="headerlink" title="一.什么是单例,多例"></a>一.什么是单例,多例</h2>
+        <h2 id="一-什么是单例-多例"><a href="#一-什么是单例-多例" class="headerlink" title="一.什么是单例,多例?"></a>一.什么是单例,多例?</h2><p>所谓单例就是所有的请求都用一个对象（实例）来处理，比如我们常用的service和dao层的对象通常都是单例的，而多例则指每个请求用一个新的对象（实例）来处理，比如action.</p>
+<p>单例模式的关键有两点：<br>1.构造方法为私有，这样外界就不能随意调用。<br>2.get的方法为静态，由类直接调用</p>
+<p>多例模式（Multiton）<br>1 、多例类可以有多个实例<br>2 、多例类必须能够自我创建并管理自己的实例，并向外界提供自己的实例。</p>
+<p>单例模式和多例模式说明：</p>
+<ol>
+<li>单例模式和多例模式属于对象模式。</li>
+<li>单例模式的对象在整个系统中只有一份，多例模式可以有多个实例。</li>
+<li>它们都不对外提供构造方法，即构造方法都为私有。<h4 id="扩展-单例具体写法"><a href="#扩展-单例具体写法" class="headerlink" title="扩展:单例具体写法"></a><a href="https://blog.csdn.net/jtchen0401/article/details/78703815" target="_blank" rel="noopener">扩展:单例具体写法</a></h4><h2 id="二-如何产生单例多例？"><a href="#二-如何产生单例多例？" class="headerlink" title="二. 如何产生单例多例？"></a>二. 如何产生单例多例？</h2>在通用的SSM中，单例在spring中是默认的，如果要产生多例，则在配置文件的bean中添加scope=”prototype”或者使用注解@Scope在对应类上声明.<h2 id="三-spring中创建bean对象时多例和单例的区别"><a href="#三-spring中创建bean对象时多例和单例的区别" class="headerlink" title="三. spring中创建bean对象时多例和单例的区别"></a>三. spring中创建bean对象时多例和单例的区别</h2><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span><br><span class="line"><span class="tag">&lt;<span class="name">beans</span> <span class="attr">xmlns</span>=<span class="string">"http://www.springframework.org/schema/beans"</span></span></span><br><span class="line"><span class="tag">       <span class="attr">xmlns:xsi</span>=<span class="string">"http://www.w3.org/2001/XMLSchema-instance"</span></span></span><br><span class="line"><span class="tag"> <span class="attr">xsi:schemaLocation</span>=<span class="string">"http://www.springframework.org/schema/beans</span></span></span><br><span class="line"><span class="tag"><span class="string">           http://www.springframework.org/schema/beans/spring-beans-2.5.xsd"</span>&gt;</span></span><br><span class="line">	   <span class="comment">&lt;!-- </span></span><br><span class="line"><span class="comment">			init-method</span></span><br><span class="line"><span class="comment">			  * 该方法是由spring容器执行</span></span><br><span class="line"><span class="comment">			  * 在构造函数之后执行</span></span><br><span class="line"><span class="comment">			  * 如果在构造函数之后，在调用方法之前要做一些工作，可以在init方法中完成</span></span><br><span class="line"><span class="comment">			destroy-method</span></span><br><span class="line"><span class="comment">			  * 如果该bean是单例(默认就是singlton)，则在spring容器关闭或者销毁的时候，执行该方法</span></span><br><span class="line"><span class="comment">			  * 如果该bean是多例(scope="prototype")，则spring容器不负责销毁</span></span><br><span class="line"><span class="comment">			说明：要想让spring容器控制bean的生命周期，那么该bean必须是单例</span></span><br><span class="line"><span class="comment">					   如果该bean是多例，该bean中还有资源，关闭资源的操作由程序员完成</span></span><br><span class="line"><span class="comment">		--&gt;</span></span><br><span class="line"> 	<span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"helloWorld"</span> <span class="attr">class</span>=<span class="string">"cn.edu.initdestroy.HelloWorld"</span> <span class="attr">scope</span>=<span class="string">"prototype"</span> <span class="attr">init-method</span>=<span class="string">"init"</span> <span class="attr">destroy-method</span>=<span class="string">"destroy"</span>&gt;</span><span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">beans</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>注意： 当一个bean是多例模式的情况下，lazy-init为false或者default无效。<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- </span></span><br><span class="line"><span class="comment">	在默认情况下，spring创建bean是单例模式</span></span><br><span class="line"><span class="comment">	scope</span></span><br><span class="line"><span class="comment">	   singleton  默认</span></span><br><span class="line"><span class="comment">			单例</span></span><br><span class="line"><span class="comment">			属性是共享的</span></span><br><span class="line"><span class="comment">			一般情况下，把数据存放在方法中的变量中</span></span><br><span class="line"><span class="comment">	   prototype</span></span><br><span class="line"><span class="comment">			多例</span></span><br><span class="line"><span class="comment">			当一个bean是多例模式的情况下，lazy-init为false或者default无效</span></span><br><span class="line"><span class="comment">--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"helloWorld"</span>  <span class="attr">class</span>=<span class="string">"cn.itcast.spring0909.scope.HelloWorld"</span> <span class="attr">scope</span>=<span class="string">"prototype"</span> <span class="attr">lazy-init</span>=<span class="string">"false"</span>&gt;</span><span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- </span></span><br><span class="line"><span class="comment">	在启动spring容器的时候，spring容器配置文件中的类就已经创建完成对象了</span></span><br><span class="line"><span class="comment">	lazy-init</span></span><br><span class="line"><span class="comment">	   default 即为 false</span></span><br><span class="line"><span class="comment">	   true  在context.getBean的时候才要创建对象</span></span><br><span class="line"><span class="comment">		  *  优点</span></span><br><span class="line"><span class="comment">			如果该bean中有大数据存在，则什么时候context.getBean,什么时候创建对象</span></span><br><span class="line"><span class="comment">			可以防止数据过早的停留在内存中，做到了懒加载</span></span><br><span class="line"><span class="comment">		  *  缺点</span></span><br><span class="line"><span class="comment">			如果spring配置文件中，该bean的配置有错误，那么在tomcat容器启动的时候，发现不了</span></span><br><span class="line"><span class="comment">	   false 在启动spring容器的时候创建对象</span></span><br><span class="line"><span class="comment">		  *  优点</span></span><br><span class="line"><span class="comment">			如果在启动tomcat时要启动spring容器，</span></span><br><span class="line"><span class="comment">			那么如果spring容器会错误，这个时候tomcat容器不会正常启动</span></span><br><span class="line"><span class="comment">		  *  缺点</span></span><br><span class="line"><span class="comment">			如果存在大量的数据，会过早的停留在内存中</span></span><br><span class="line"><span class="comment">--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"helloWorld"</span> <span class="attr">class</span>=<span class="string">"cn.edu.spring0909.createobject.when.HelloWorl"</span> <span class="attr">lazy-init</span>=<span class="string">"true"</span>&gt;</span><span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"person"</span> <span class="attr">class</span>=<span class="string">"cn.edu.spring0909.createobject.when.Person"</span> <span class="attr">lazy-init</span>=<span class="string">"true"</span>&gt;</span><span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="四-为什么要用单例多例？"><a href="#四-为什么要用单例多例？" class="headerlink" title="四. 为什么要用单例多例？"></a>四. 为什么要用单例多例？</h2><p>之所以用单例，是因为没必要每个请求都新建一个对象，这样子既浪费CPU又浪费内存；<br>之所以用多例，是为了防止并发问题；即一个请求改变了对象的状态，此时对象又处理另一个请求，而之前请求对对象状态的改变导致了对象对另一个请求做了错误的处理；</p>
+<h2 id="五-什么时候用单例，什么时候用多例？"><a href="#五-什么时候用单例，什么时候用多例？" class="headerlink" title="五. 什么时候用单例，什么时候用多例？"></a>五. 什么时候用单例，什么时候用多例？</h2><p>用单例和多例的标准只有一个：<br>当对象含有可改变的状态时（更精确的说就是在实际应用中该状态会改变），则多例，否则单例；<br>另外要说一下，并不是说service或dao一定是单例，标准同第四点所讲的，就曾见过有的service中也包含了可改变的状态，同时执行方法也依赖该状态，但一样用的单例，这样就会出现隐藏的BUG,而并发的BUG通常很难重现和查找.</p>
+
       
     </div>
     
@@ -601,7 +615,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-count">11</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -612,7 +626,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -623,7 +637,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -681,7 +695,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一-什么是单例-多例"><span class="nav-number">1.</span> <span class="nav-text">一.什么是单例,多例</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一-什么是单例-多例"><span class="nav-number">1.</span> <span class="nav-text">一.什么是单例,多例?</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#扩展-单例具体写法"><span class="nav-number">1.0.1.</span> <span class="nav-text">扩展:单例具体写法</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二-如何产生单例多例？"><span class="nav-number">2.</span> <span class="nav-text">二. 如何产生单例多例？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三-spring中创建bean对象时多例和单例的区别"><span class="nav-number">3.</span> <span class="nav-text">三. spring中创建bean对象时多例和单例的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四-为什么要用单例多例？"><span class="nav-number">4.</span> <span class="nav-text">四. 为什么要用单例多例？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#五-什么时候用单例，什么时候用多例？"><span class="nav-number">5.</span> <span class="nav-text">五. 什么时候用单例，什么时候用多例？</span></a></li></ol></div>
             
 
           </div>
@@ -716,7 +730,7 @@
     
       <span class="post-meta-item-text">本站总字数&#58;</span>
     
-    <span title="本站总字数">8.2k</span>
+    <span title="本站总字数">10.6k</span>
   
 </div>
 
