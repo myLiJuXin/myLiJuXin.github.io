@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="数据库,redis,mysql," />
+  <meta name="keywords" content="耦合,解耦," />
 
 
 
@@ -81,21 +81,20 @@
 
 
 
-<meta name="description" content="redis与mysql的优缺点分析，以及在web中的配合使用">
-<meta name="keywords" content="数据库,redis,mysql">
+<meta name="description" content="关于java中耦合解耦内聚相关了解学习">
+<meta name="keywords" content="耦合,解耦">
 <meta property="og:type" content="article">
-<meta property="og:title" content="关于数据库redis与Mysql的区别以及在web开发中的配合使用">
-<meta property="og:url" content="http://myLiJuXin.com/2018/08/21/关于数据库redis与Mysql的区别以及在web开发中的配合使用/index.html">
+<meta property="og:title" content="java中耦合解耦内聚相关了解">
+<meta property="og:url" content="http://myLiJuXin.com/2018/08/25/java中耦合解耦内聚相关了解/index.html">
 <meta property="og:site_name" content="初心不变">
-<meta property="og:description" content="redis与mysql的优缺点分析，以及在web中的配合使用">
+<meta property="og:description" content="关于java中耦合解耦内聚相关了解学习">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://mylijuxin.com/2018/08/21/关于数据库redis与Mysql的区别以及在web开发中的配合使用/1.jpg">
-<meta property="og:image" content="http://mylijuxin.com/2018/08/21/关于数据库redis与Mysql的区别以及在web开发中的配合使用/2.jpg">
-<meta property="og:updated_time" content="2018-08-22T08:27:05.963Z">
+<meta property="og:image" content="http://mylijuxin.com/2018/08/25/java中耦合解耦内聚相关了解/耦合关系.png">
+<meta property="og:updated_time" content="2018-08-25T10:14:57.624Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="关于数据库redis与Mysql的区别以及在web开发中的配合使用">
-<meta name="twitter:description" content="redis与mysql的优缺点分析，以及在web中的配合使用">
-<meta name="twitter:image" content="http://mylijuxin.com/2018/08/21/关于数据库redis与Mysql的区别以及在web开发中的配合使用/1.jpg">
+<meta name="twitter:title" content="java中耦合解耦内聚相关了解">
+<meta name="twitter:description" content="关于java中耦合解耦内聚相关了解学习">
+<meta name="twitter:image" content="http://mylijuxin.com/2018/08/25/java中耦合解耦内聚相关了解/耦合关系.png">
 
 
 
@@ -125,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="http://myLiJuXin.com/2018/08/21/关于数据库redis与Mysql的区别以及在web开发中的配合使用/"/>
+  <link rel="canonical" href="http://myLiJuXin.com/2018/08/25/java中耦合解耦内聚相关了解/"/>
 
 
 
 
 
-  <title>关于数据库redis与Mysql的区别以及在web开发中的配合使用 | 初心不变</title>
+  <title>java中耦合解耦内聚相关了解 | 初心不变</title>
   
 
 
@@ -306,7 +305,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://myLiJuXin.com/2018/08/21/关于数据库redis与Mysql的区别以及在web开发中的配合使用/">
+    <link itemprop="mainEntityOfPage" href="http://myLiJuXin.com/2018/08/25/java中耦合解耦内聚相关了解/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="LJX">
@@ -323,7 +322,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">关于数据库redis与Mysql的区别以及在web开发中的配合使用</h1>
+          <h1 class="post-title" itemprop="name headline">java中耦合解耦内聚相关了解</h1>
         
 
         <div class="post-meta">
@@ -335,8 +334,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-21T21:51:28+08:00">
-                2018-08-21
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-25T16:35:01+08:00">
+                2018-08-25
               </time>
             
 
@@ -358,8 +357,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/数据库/" itemprop="url" rel="index">
-                    <span itemprop="name">数据库</span>
+                  <a href="/categories/概念/" itemprop="url" rel="index">
+                    <span itemprop="name">概念</span>
                   </a>
                 </span>
 
@@ -389,7 +388,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1,427
+                  939
                 </span>
               
 
@@ -405,7 +404,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  5
+                  3
                 </span>
               
             </div>
@@ -413,7 +412,7 @@
 
           
               <div class="post-description">
-                  redis与mysql的优缺点分析，以及在web中的配合使用
+                  关于java中耦合解耦内聚相关了解学习
               </div>
           
 
@@ -430,43 +429,17 @@
       
 
       
-        <h3 id="传统型关系数据库Mysql的瓶颈"><a href="#传统型关系数据库Mysql的瓶颈" class="headerlink" title="传统型关系数据库Mysql的瓶颈"></a>传统型关系数据库Mysql的瓶颈</h3><p>在互联网领域，MySQL作为一款关系型数据库为互联网的发展做出了卓越的贡献。然而随着互联网的发展，在大数据量高并发的环境下，应用开发也越来越复杂，具有很强的技术挑战性。分表分库子库等无不在增加数据库结构的复杂程度。MySQL数据库也经常存储一些大文本字段，导致数据库表非常的大，在做数据库恢复的时候就导致非常的慢，不容易快速恢复数据库。比如1000万4KB大小的文本就接近40GB的大小，如果能把这些数据从MySQL省去，MySQL将变得非常的小。<br><br>关系数据库很强大，但是它并不能很好的应付所有的应用场景。MySQL的扩展性差，大数据下IO压力大，表结构更改困难。</p>
-<h3 id="Nosql与redis"><a href="#Nosql与redis" class="headerlink" title="Nosql与redis"></a>Nosql与redis</h3><p>NoSQL最常见的解释是“non-relational”，“Not Only SQL”也被很多人接受，指的是非关系型的数据库。</p>
-<h4 id="Nosql的优势"><a href="#Nosql的优势" class="headerlink" title="Nosql的优势"></a>Nosql的优势</h4><p>易扩展：NoSQL数据库种类繁多，但是一个共同的特点都是去掉关系数据库的关系型特性。数据之间无关系，这样就非常容易扩展。<br>大数据量，高性能：NoSQL数据库都具有非常高的读写性能，尤其在大数据量下，同样表现优秀。这得益于它的无关系性，数据库的结构简单<br>灵活的数据模型：NoSQL无需事先为要存储的数据建立字段，随时可以存储自定义的数据格式。而在关系数据库里，增删字段是一件非常麻烦的事情。如果是非常大数据量的表，增加字段简直就是一个噩梦<br>高可用：NoSQL在不太影响性能的情况，就可以方便的实现高可用的架构。</p>
-<h4 id="redis"><a href="#redis" class="headerlink" title="redis"></a>redis</h4><p>Redis是一个开源（BSD许可）的、内存中的数据结构存储系统，它可以用作数据库、缓存和消息中间件。<br>redis是一个高性能的key-value存储系统。和Memcached类似，它支持存储的value类型相对更多，包括string(字符串)、list(链表)、set(集合)、zset(sortedset–有序集合)和hash（哈希类型）。redis的出现，很大程度补偿了memcached这类key/value存储的不足，在部分场合可以对关系数据库起到很好的补充作用。它提供了Python，Ruby，Erlang，PHP客户端，使用很方便<br>Redis支持主从同步。数据可以从主服务器向任意数量的从服务器上同步，从服务器可以是关联其他从服务器的主服务器。这使得Redis可执行单层树复制。从盘可以有意无意的对数据进行写操作。由于完全实现了发布/订阅机制，使得从数据库在任何地方同步树时，可订阅一个频道并接收主服务器完整的消息发布记录。同步对读取操作的可扩展性和数据冗余很有帮助。</p>
-<h3 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h3><p>NoSQL数据库的出现，弥补了关系数据（比如MySQL）在某些方面的不足，在某些方面能极大的节省开发成本和维护成本<br>MySQL和NoSQL都有各自的特点和使用的应用场景，两者的紧密结合将会给数据库发展带来新的思路。让关系数据库关注在关系上，NoSQL关注在存储上。</p>
-<h3 id="利用redis做mysql的缓存"><a href="#利用redis做mysql的缓存" class="headerlink" title="利用redis做mysql的缓存"></a>利用redis做mysql的缓存</h3><p>前面部分已经介绍mysql的瓶颈，当网站的处理和访问量非常大的时候，我们的数据库的压力就变大了，数据库的连接池，数据库同时处理数据的能力就会受到很大的挑战，一旦数据库承受了其最大承受能力，网站的数据处理效率就会大打折扣。此时就要使用高并发处理、负载均衡和分布式数据库，而这些技术既花费人力，又花费资金。</p>
-<h4 id="缓存"><a href="#缓存" class="headerlink" title="缓存"></a>缓存</h4><img src="/2018/08/21/关于数据库redis与Mysql的区别以及在web开发中的配合使用/1.jpg">
-<p>页面缓存经常用在CMS(content manage system)内存管理系统里面。<br>数据缓存经常会用在页面的具体数据里面。</p>
-<h4 id="Redis缓存原理"><a href="#Redis缓存原理" class="headerlink" title="Redis缓存原理"></a>Redis缓存原理</h4><p>采用redis nosql数据库作为Mysql数据库的缓存，在查找的时候，首先查找redis缓存，如果找到则返回结果；如果在redis中没有找到，那么查找Mysql数据库，找到的花则返回结果并且更新redis；如果没有找到则返回空。</p>
-<img src="/2018/08/21/关于数据库redis与Mysql的区别以及在web开发中的配合使用/2.jpg">
-<p>对于写入：用户增删改数据库，先访问mysql，mysql再把数据更新到redis。</p>
-<p>Mysql中的数据都是按表存储的；更微观地看，这些表都是按行存储的。每执行一次select查询，Mysql都会返回一个结果集，这个结果集由若干行组成。所以，一个自然而然的想法就是在Redis中找到一种对应于Mysql行的数据结构。<br>Redis中提供了五种基本数据结构，即字符串（string）、列表（list）、哈希（hash）、集合（set）和有序集合（sorted set）。经过调研，发现适合存储行的数据结构有两种，即string和hash。</p>
-<p>用户的缓存数据在返回时一般都是JSON的字典格式，对应的存到redis里就是hash格式，这个与python的字典是相对应的。</p>
-<table>
-<thead>
-<tr>
-<th>redis中的hash</th>
-<th>python中的字典</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><font color="#000000">key</font></td>
-<td><font color="#000000">对象</font></td>
-</tr>
-<tr>
-<td><font color="#000000">field</font></td>
-<td><font color="#000000">key</font></td>
-</tr>
-<tr>
-<td><font color="#000000">value</font></td>
-<td><font color="#000000">value</font></td>
-</tr>
-</tbody>
-</table>
-<p>即hash会根据要缓存的数据生成唯一标识UUID，UUID作为键，用户的字典数据中的键值对作为UUID键的值，存储到redis中。</p>
+        <h2 id="一-程序的耦合关系以及解耦的方式"><a href="#一-程序的耦合关系以及解耦的方式" class="headerlink" title="一.程序的耦合关系以及解耦的方式"></a>一.程序的耦合关系以及解耦的方式</h2><h3 id="1-耦合与解耦的概念"><a href="#1-耦合与解耦的概念" class="headerlink" title="1.耦合与解耦的概念"></a>1.耦合与解耦的概念</h3><div>耦合: 在软件工程中，对象之间的耦合度就是对象之间的依赖性。对象之间的耦合越高，维护成本越高，因此对象的设计应使类和构件之间的耦合最小<br><br>解耦:在软件工程中，降低耦合度即可以理解为解耦，模块间有依赖关系必然存在耦合，理论上的绝对零耦合是做不到的，但可以通过一些现有的方法将耦合度降至最低</div>
 
+<h3 id="2-程序中存在的耦合关系与解耦的方式"><a href="#2-程序中存在的耦合关系与解耦的方式" class="headerlink" title="2.程序中存在的耦合关系与解耦的方式"></a>2.程序中存在的耦合关系与解耦的方式</h3><h4 id="2-1-耦合简单的例子"><a href="#2-1-耦合简单的例子" class="headerlink" title="2.1 耦合简单的例子:"></a>2.1 耦合简单的例子:</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">A</span></span>&#123;</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">int</span> i;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">B</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">put</span><span class="params">(A a)</span></span>&#123;</span><br><span class="line">		System.out.println(a.i);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>以上代码就属于强耦合,B类中方法put要执行必须需要A类中的int属性i,缺了A,B中方法就不能执行</p>
+<h4 id="2-2-使用面向接口的编程方式实现上面例子的解耦"><a href="#2-2-使用面向接口的编程方式实现上面例子的解耦" class="headerlink" title="2.2 使用面向接口的编程方式实现上面例子的解耦:"></a>2.2 使用面向接口的编程方式实现上面例子的解耦:</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"> <span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">IBase</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">say</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">A</span> <span class="keyword">implements</span> <span class="title">IBase</span></span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">say</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"I am A"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">B</span> <span class="keyword">implements</span> <span class="title">IBase</span></span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">say</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"I am B"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">C</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">put</span><span class="params">(IBase base)</span></span>&#123;</span><br><span class="line">		base.say();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这只是其中的一种情况</p>
+<h4 id="2-3-根据耦合程度分类"><a href="#2-3-根据耦合程度分类" class="headerlink" title="2.3 根据耦合程度分类"></a>2.3 根据耦合程度分类</h4><p><img src="/2018/08/25/java中耦合解耦内聚相关了解/耦合关系.png" alt=""><br>总结：<br>耦合是影响软件复杂程度和设计质量的一个重要因素，在设计上我们应采用以下原则：如果模块间必须存在耦合，就尽量使用数据耦合，少用控制耦合，限制公共耦合的范围，尽量避免使用内容耦合。</p>
+<h4 id="2-4-解耦"><a href="#2-4-解耦" class="headerlink" title="2.4 解耦"></a>2.4 解耦</h4><p>解耦的本质就是将类之间的直接关系转换成间接关系，不管是类向上转型还是接口回调都是在类之间加了一层，将原来的直接关系变成间接关系，使得两类对中间层是强耦合，两类之间变成弱耦合关系。</p>
+<p>（a）采用现有设计模式实现解耦，如事件驱动模式、观察者模式、责任链模式等都可以达到解耦的目的；<br>（b）采用面向接口的方式编程，而不是用直接的类型引用，除非在最小内聚单元内部。但使用该方法解耦需要注意不要滥用接口。<br>（c）高内聚，往往会带来一定程度的低耦合度。高内聚决定了内部自行依赖，对外只提供必须的接口或消息对象，那么由此即可达成较低的耦合度。<br>  ( d )注解，以注解的方式，将方法，属性注入依赖，实现高扩展性。</p>
+<p>解耦总的一句话来说，减少依赖，抽象业务和逻辑，让各个功能实现独立。</p>
+<h4 id="2-5-内聚与耦合"><a href="#2-5-内聚与耦合" class="headerlink" title="2.5 内聚与耦合"></a>2.5 内聚与耦合</h4><div>内聚标志一个模块内各个元素彼此结合的紧密程度，它是信息隐蔽和局部化概念的自然扩展。内聚是从功能角度来度量模块内的联系，一个好的内聚模块应当恰好做一件事。它描述的是模块内的功能联系。<br><br>耦合是软件结构中各模块之间相互连接的一种度量，耦合强弱取决于模块间接口的复杂程度、进入或访问一个模块的点以及通过接口的数据。<br><br>程序讲究的是低耦合，高内聚。就是同一个模块内的各个元素之间要高度紧密，但是各个模块之间的相互依存度却要不那么紧密。 </div>
       
     </div>
     
@@ -493,7 +466,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/数据库-redis-mysql/" rel="tag"><i class="fa fa-tag"></i> 数据库,redis,mysql</a>
+            <a href="/tags/耦合-解耦/" rel="tag"><i class="fa fa-tag"></i> 耦合,解耦</a>
           
         </div>
       
@@ -506,8 +479,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/08/21/关于Linux的终端常用命令（一）/" rel="next" title="关于Linux终端的常用命令（一）">
-                <i class="fa fa-chevron-left"></i> 关于Linux终端的常用命令（一）
+              <a href="/2018/08/24/java单例和多例了解/" rel="next" title="java单例和多例了解">
+                <i class="fa fa-chevron-left"></i> java单例和多例了解
               </a>
             
           </div>
@@ -515,10 +488,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/08/23/spring框架入门学习/" rel="prev" title="spring框架入门学习">
-                spring框架入门学习 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -720,7 +689,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#传统型关系数据库Mysql的瓶颈"><span class="nav-number">1.</span> <span class="nav-text">传统型关系数据库Mysql的瓶颈</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Nosql与redis"><span class="nav-number">2.</span> <span class="nav-text">Nosql与redis</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Nosql的优势"><span class="nav-number">2.1.</span> <span class="nav-text">Nosql的优势</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#redis"><span class="nav-number">2.2.</span> <span class="nav-text">redis</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#结论"><span class="nav-number">3.</span> <span class="nav-text">结论</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#利用redis做mysql的缓存"><span class="nav-number">4.</span> <span class="nav-text">利用redis做mysql的缓存</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#缓存"><span class="nav-number">4.1.</span> <span class="nav-text">缓存</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Redis缓存原理"><span class="nav-number">4.2.</span> <span class="nav-text">Redis缓存原理</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一-程序的耦合关系以及解耦的方式"><span class="nav-number">1.</span> <span class="nav-text">一.程序的耦合关系以及解耦的方式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-耦合与解耦的概念"><span class="nav-number">1.1.</span> <span class="nav-text">1.耦合与解耦的概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-程序中存在的耦合关系与解耦的方式"><span class="nav-number">1.2.</span> <span class="nav-text">2.程序中存在的耦合关系与解耦的方式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-耦合简单的例子"><span class="nav-number">1.2.1.</span> <span class="nav-text">2.1 耦合简单的例子:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-使用面向接口的编程方式实现上面例子的解耦"><span class="nav-number">1.2.2.</span> <span class="nav-text">2.2 使用面向接口的编程方式实现上面例子的解耦:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-根据耦合程度分类"><span class="nav-number">1.2.3.</span> <span class="nav-text">2.3 根据耦合程度分类</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-4-解耦"><span class="nav-number">1.2.4.</span> <span class="nav-text">2.4 解耦</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-5-内聚与耦合"><span class="nav-number">1.2.5.</span> <span class="nav-text">2.5 内聚与耦合</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
